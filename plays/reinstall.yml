@@ -17,7 +17,7 @@
       file:
         state: link
         src: install
-        dest: "/var/lib/tftpboot/pxelinux.cfg/01-{{ hostvars[item]['ansible_default_ipv4']['macaddress'] | regex_replace(':','-') }}"
+        dest: "/tftpboot/pxelinux.cfg/01-{{ hostvars[item]['ansible_default_ipv4']['macaddress'] | regex_replace(':','-') }}"
       become: true
       loop: "{{ groups['reinstall'] }}"
 

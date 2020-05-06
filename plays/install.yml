@@ -14,7 +14,7 @@
       file:
         state: link
         src: install
-        dest: "/var/lib/tftpboot/pxelinux.cfg/01-{{ hostvars[item]['mac'] | lower | regex_replace(':','-') }}"
+        dest: "/tftpboot/pxelinux.cfg/01-{{ hostvars[item]['mac'] | lower | regex_replace(':','-') }}"
       become: true
       loop: "{{ groups['initialise'] }}"
 

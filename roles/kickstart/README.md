@@ -23,7 +23,7 @@ kickstart_pkgs:
   - syslinux-tftpboot
   - createrepo
   - httpd
-kickstart_tftpdir: /var/lib/tftpboot
+kickstart_tftpdir: /tftpboot
 ```
 
 You'll want to tailor `kickstart_server`
